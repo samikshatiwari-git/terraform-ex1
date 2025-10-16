@@ -4,6 +4,7 @@ pool: win-pool1
 
 steps:
 - task: PowerShell@2
+  displayName: "Run Hello World Script"
   inputs:
     targetType: 'inline'
     script: |
