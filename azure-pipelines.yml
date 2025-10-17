@@ -13,13 +13,13 @@ steps:
     backendServiceArm: 'Tuesday'
     backendAzureRmStorageAccountName: 'samikshasa'
     backendAzureRmContainerName: 'myfiles'
-    backendAzureRmKey: 'terraform.tfstate'
-- task: TerraformTask@5
-  inputs:
-    provider: 'azurerm'
-    command: 'validate'
-- task: TerraformTask@5
-  inputs:
-    provider: 'azurerm'
-    command: 'plan'
-    environmentServiceNameAzureRM: 'Tuesday'
+    backendAzureRmKey: 'terraform1.tfstate'
+# - task: TerraformTask@5
+#   inputs:
+#     provider: 'azurerm'
+#     command: 'validate'
+# - task: TerraformTask@5
+#   inputs:
+#     provider: 'azurerm'
+#     command: 'plan'
+#     environmentServiceNameAzureRM: 'Tuesday'
