@@ -6,3 +6,11 @@ steps:
 - task: TerraformInstaller@1
   inputs:
     terraformVersion: 'latest'
+- task: TerraformTask@5
+  inputs:
+    provider: 'azurerm'
+    command: 'init'
+    backendServiceArm: 'Tuesday'
+    backendAzureRmStorageAccountName: 'samikshasa'
+    backendAzureRmContainerName: 'myfiles'
+    backendAzureRmKey: 'terraform.tfstate'
