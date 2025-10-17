@@ -16,7 +16,7 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "Samiksha_rg" {
-  name     = "samiksha_rg"
+  name     = "samiksha_rg1"
   location = "Central India"
 }
 
