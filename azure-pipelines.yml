@@ -6,32 +6,11 @@ steps:
 - task: TerraformInstaller@1
   inputs:
     terraformVersion: 'latest'
-
 - task: TerraformTask@5
   inputs:
     provider: 'azurerm'
     command: 'init'
-    environmentServiceNameAzureRM: 'Tuesday'
+    backendServiceArm: 'Tuesday'
     backendAzureRmStorageAccountName: 'samikshasa'
     backendAzureRmContainerName: 'myfiles'
-    backendAzureRmKey: 'key/terraform.tfstate'
-
-- task: TerraformTask@5
-  inputs:
-    provider: 'azurerm'
-    command: 'validate'
-    environmentServiceNameAzureRM: 'Tuesday'
-
-- task: TerraformTask@5
-  inputs:
-    provider: 'azurerm'
-    command: 'plan'
-    environmentServiceNameAzureRM: 'Tuesday'
-
-- task: TerraformTask@5
-  inputs:
-    provider: 'azurerm'
-    command: 'apply'
-    environmentServiceNameAzureRM: 'Tuesday'
-    allowTelemetryCollection: true
-    autoApprove: true
+    backendAzureRmKey: 'terraform.tfstate'
