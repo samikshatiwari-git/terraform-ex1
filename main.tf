@@ -1,18 +1,23 @@
 terraform {
   required_providers {
     azurerm = {
-      source = "hashicorp/azurerm"
+      source  = "hashicorp/azurerm"
       version = "4.47.0"
     }
+  }
+
+  backend "azurerm" {
+    resource_group_name  = "rg_samiksha"               # Existing resource group
+    storage_account_name = "samikshasa"            # Must be globally unique
+    container_name       = "myfiles"                     # Blob container for state
+    key                  = "terraform.tfstate"           # Path within the container
   }
 }
 
 provider "azurerm" {
-    features {
-      
-    }
-    subscription_id = var.subscription_id
-  # Configuration options
+  features {}
+
+  subscription_id = var.subscription_id
 }
 
 resource "azurerm_resource_group" "Samiksha_rg" {
