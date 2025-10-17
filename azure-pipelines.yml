@@ -13,7 +13,7 @@ steps:
     backendServiceArm: 'Tuesday'
     backendAzureRmStorageAccountName: 'samikshasa'
     backendAzureRmContainerName: 'myfiles'
-    backendAzureRmKey: 'terraform2.tfstate'
+    backendAzureRmKey: 'terraform3.tfstate'
 - task: TerraformTask@5
   inputs:
     provider: 'azurerm'
